@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0110)https://s0.2mdn.net/8018825/1603901741598/vert_baseline_illustrated-entertainment-prospects-160x600/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="ad.size" content="width=160,height=600">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="./common.min.css">
+  <link rel="stylesheet" type="text/css" href="./main.css">
+  <script src="./tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+
+  <!--GOOGLE CLICK HANDLING CODE -->
+  <script type="text/javascript">
+    var clickTag = "https://www.paypal.com";
+  </script>
+  <!--END OF CLICK HANDLING CODE -->
+<script type="text/javascript">
+    
+  (function() {
+    var MAX_URL_PARAM_LENGTH = 34;
+    var CLICK_X_URL_KEY = 'nx';
+    var CLICK_Y_URL_KEY = 'ny';
+    var CREATIVE_DIMENSIONS_KEY = 'dim';
+    var AD_URL_PARAM = '&adurl=';
+
+    var relegateNavigation = '';
+    var urlParamMap = {};
+
+    urlParamMap[CLICK_X_URL_KEY] = null;
+    urlParamMap[CLICK_Y_URL_KEY] = null;
+    urlParamMap[CREATIVE_DIMENSIONS_KEY] = null;
+
+    var handleClickTagMessage = function(e) {
+      try {
+        var eventData = JSON.parse(e.data);
+      } catch (err) {
+        return;
+      }
+      if (eventData.isInitClickTag) {
+        if (eventData.clickTags) {
+          for (var i = 0; i < eventData.clickTags.length; i++) {
+            var clkTag = eventData.clickTags[i];
+            window[clkTag.name] = clkTag.url;
+          }
+        } else if (eventData.clickTag) {
+          window.clickTag = eventData.clickTag;
+        }
+        relegateNavigation = eventData.relegateNavigation;
+      }
+    };
+
+    var storeClickCoordinates = function(e) {
+      urlParamMap[CLICK_X_URL_KEY] = Math.round(e.clientX);
+      urlParamMap[CLICK_Y_URL_KEY] = Math.round(e.clientY);
+    };
+
+    var getCreativeDimensions = function() {
+      return window.innerWidth + 'x' + window.innerHeight;
+    }
+
+    var getExitClickParams = function(e) {
+      urlParamMap[CREATIVE_DIMENSIONS_KEY] = getCreativeDimensions();
+
+      var exitParams = '';
+      for (var key in urlParamMap) {
+        exitParams += '&' + key + '=';
+        if (urlParamMap[key] !== null) {
+          exitParams += urlParamMap[key];
+        }
+      }
+      return exitParams;
+    }
+
+    var appendExitClickParams = function(url) {
+      var adUrlIndex = url.toLowerCase().indexOf(AD_URL_PARAM);
+      var paramsToBeAdded = getExitClickParams();
+      if (adUrlIndex > -1 && paramsToBeAdded.length <= MAX_URL_PARAM_LENGTH) {
+        url = url.substr(0, adUrlIndex) + paramsToBeAdded +
+          url.substr(adUrlIndex);
+      };
+      return url;
+    };
+
+    if (open.call) {
+      window.open = function(open) {
+        return function(url, name, features) {
+          url = appendExitClickParams(url);
+          if (relegateNavigation === 'parent') {
+            var message = {'clickTag': url, 'isPostClickTag': true};
+            parent.postMessage(JSON.stringify(message), '*');
+          } else {
+            var args = [url, name];
+            if (features) {
+              args.push(features);
+            }
+            open.apply(window, args);
+          }
+        };
+      }(window.open);
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener(
+          'message', handleClickTagMessage, false);
+      window.addEventListener('mousedown', storeClickCoordinates, true);
+    } else {
+      window.attachEvent('onmessage', handleClickTagMessage);
+    }
+  })();
+    
+  </script><title>160x600</title></head>
+
+<body>
+  <div class="banner" style="display: block; width: 160px; height: 600px;">
+    <div class="htmlMem" style="transform-origin: 50% 50% 0px; transform: matrix(1, 0, 0.00174, 0.99999, 0, 0); display: block; opacity: 1;">
+      <div class="scene" style="display: block;">
+        <div class="absolute background"></div>
+
+        <!-- Cloud SVG -->
+        <svg class="cloud" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250"><defs><style>.cls-1,.cls-2{fill:none;stroke-linecap:round;stroke-miterlimit:10;}.cls-1{stroke:#fff;stroke-width:50px;}.cls-2{stroke:#179bd7;stroke-width:4.189px;}.cls-3{fill:#fcd10a;}</style></defs><path id="cloud" class="cls-1" d="M79.343,139.406h81c4.5,0,9-.178,9-4.678s-4.5-4.322-9-4.322h-18v-8.5c0-9-9-18-18-18s-18,9-18,18c0,8.416,8.349,15.649,18,15.649s16.467-6.734,16.467-15.546" data-svg-origin="124.34300231933594 121.656005859375" style="stroke-dashoffset: -238.893; stroke-dasharray: 1e-05px, 248.893px; stroke: rgb(253, 209, 0); transform: matrix(0.5, 0, 0, 0.5, 62.1715, -69.172); transform-origin: 0px 0px 0px;"></path><g class="blue-lines right" style="display: none;"><path class="blue-line1 cls-2" d="M207.026,178.641a57.677,57.677,0,0,0,0-81.567" data-svg-origin="215.47245025634766 137.85750579833984" style="transform: matrix(1.2, 0, 0, 1.2, -43.0945, -27.5715); stroke-dashoffset: -91.6109; stroke-dasharray: 1e-05px, 101.611px; opacity: 0;"></path><path class="blue-line2 cls-2" d="M197.679,169.294a44.456,44.456,0,0,0,0-62.873" data-svg-origin="204.1901092529297 137.85750579833984" style="transform: matrix(1.2, 0, 0, 1.2, -40.838, -27.5715); stroke-dashoffset: -70.8451; stroke-dasharray: 1e-05px, 80.8451px; opacity: 0;"></path></g><g class="blue-lines top"><path class="blue-line1 cls-2" d="M165.126,66.943a57.677,57.677,0,0,0-81.567,0" data-svg-origin="124.3425064086914 58.49654579162598" style="transform: matrix(1.2, 0, 0, 1.2, -24.8685, -11.6993); stroke-dashoffset: -91.6107; stroke-dasharray: 1e-05px, 101.611px; opacity: 0;"></path><path class="blue-line2 cls-2" d="M155.779,76.29a44.458,44.458,0,0,0-62.873,0" data-svg-origin="124.3425064086914 69.7793025970459" style="transform: matrix(1.2, 0, 0, 1.2, -24.8685, -13.9559); stroke-dashoffset: -70.8441; stroke-dasharray: 1e-05px, 80.8441px; opacity: 0;"></path></g><g class="blue-lines left" style="display: none;"><path class="blue-line1 cls-2" d="M42.046,97.074a57.677,57.677,0,0,0,0,81.567" data-svg-origin="33.59955024719238 137.85749435424805" style="transform: matrix(1.2, 0, 0, 1.2, -6.71991, -27.5715); stroke-dashoffset: -91.6107; stroke-dasharray: 1e-05px, 101.611px; opacity: 0;"></path><path class="blue-line2 cls-2" d="M51.393,106.421a44.458,44.458,0,0,0,0,62.873" data-svg-origin="44.882301330566406 137.85750198364258" style="transform: matrix(1.2, 0, 0, 1.2, -8.97646, -27.5715); stroke-dashoffset: -70.8441; stroke-dasharray: 1e-05px, 80.8441px; opacity: 0;"></path></g><path id="play" class="cls-3" d="M150.826,129.205l-34.569,19.958a2.86,2.86,0,0,1-4.29-2.476V106.77a2.86,2.86,0,0,1,4.29-2.477l34.569,19.959A2.86,2.86,0,0,1,150.826,129.205Z" data-svg-origin="132.1112174987793 126.72799301147461" style="opacity: 0; transform: matrix(0.5, 0, 0, 0.5, 86.0556, 63.364); transform-origin: 0px 0px 0px;"></path></svg>
+
+      </div>
+
+      <!-- frame1 -->
+      <div class="frame frame1" style="display: block; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);"><img class="text" src="./frame1-text.png" alt="paypal"></div>
+
+      <!-- frame2 -->
+      <div class="frame frame2" style="display: block;"><img class="text" src="./frame2-text.png" alt="paypal" style="display: block; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);">
+        <div class="cta yellow" style="display: block; transform: matrix3d(1, 0, 0, 0, 0, 0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1); width: 144px;">
+          <img src="./cta-logo.png" alt="paypal" style="opacity: 1;">
+        </div>
+      </div>
+
+      <!-- frame3 -->
+      <div class="frame frame3 endframe" style="display: block;">
+        <img class="text" src="./frame3-text.png" alt="paypal" style="display: block; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+        <div class="cta blue" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+          <img src="./cta-text.png" alt="paypal">
+        </div>
+        <img class="logo" src="./pp-logo-white.png" alt="paypal" style="opacity: 1;">
+      </div>
+
+      <div class="absolute common" style="display: block;">
+        <!-- Cursor -->
+        <svg class="cursor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" style="transform: matrix(0, 1, -1, 0, 150, 150); transform-origin: 50% 50% 0px;">
+          <circle class="circle" cx="60" cy="60" r="60"></circle>
+          <path class="white" d="M87.432,82.655c-.033-.824-.745-3.883-3.084-4.66a3.842,3.842,0,0,0-3.57.414,1.443,1.443,0,0,0-.065-.193,4.639,4.639,0,0,0-3.549-3,5.664,5.664,0,0,0-4.077.848,4.6,4.6,0,0,0-4.606-2.476,5.4,5.4,0,0,0-3.623,1.932l-.138-6.436-.083-3.906c-.042-2.024-.153-4.061-.13-6.085A4.3,4.3,0,0,0,60.28,55.26a4.554,4.554,0,0,0-3.33,1.5,4.824,4.824,0,0,0-.979,3.425l-.05,4.954-.065,6.389-.075,7.34c-.045.213-.031,2.714,0,5.157.017,1.613.039,3.2.052,4.088a.929.929,0,0,1-1.342.845l-5.643-7.572a4.662,4.662,0,1,0-7.476,5.572l9.02,12.1a1.492,1.492,0,0,0,.141.235c.493.669.992,1.324,1.489,1.952l.014.019.005.006c.689.871,1.371,1.683,2.017,2.348,10.171,10.407,22.753,8.026,28.142,3.9,2.7-2.062,4.782-6.149,5.3-9.975.117-.86.188-4.068.2-4.671C87.754,87.548,87.557,85.684,87.432,82.655Z"></path>
+          <!-- lines animated on click -->
+          <line class="line blue" x1="53" y1="63" x2="19" y2="83" style="stroke-dashoffset: 0; stroke-dasharray: 1e-05px, 50.4462px;"></line>
+          <line class="line blue" x1="53" y1="56" x2="19" y2="36" style="stroke-dashoffset: 0; stroke-dasharray: 1e-05px, 50.4462px;"></line>
+          <line class="line blue" x1="60" y1="52" x2="60" y2="13" style="stroke-dashoffset: 0; stroke-dasharray: 1e-05px, 50px;"></line>
+          <line class="line blue" x1="66" y1="56" x2="100" y2="36" style="stroke-dashoffset: 0; stroke-dasharray: 1e-05px, 50.4462px;"></line>
+          <line class="line blue" x1="66" y1="63" x2="100" y2="83" style="stroke-dashoffset: 0; stroke-dasharray: 1e-05px, 50.4462px;"></line>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Click Through -->
+    <div id="exit" class="clickthrough no-select"></div>
+    <svg class="replay top-left white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="opacity: 1; display: block;">
+      <path d="M13.29,4.76V3.45L8.58,5.9l4.7,2.45V7.11h0A2.82,2.82,0,0,1,16,10a2.82,2.82,0,0,1-2.74,2.88H6.71A2.82,2.82,0,0,1,4,10,2.82,2.82,0,0,1,6.71,7.11h.66V4.76H6.71a5.15,5.15,0,0,0-5,5.23,5.15,5.15,0,0,0,5,5.23h6.58a5.15,5.15,0,0,0,5-5.23A5.15,5.15,0,0,0,13.29,4.76Z"></path>
+    </svg>
+  </div>
+
+  <script src="./common.js"></script>
+  <script src="./main.js"></script>
+
+
+
+
+<!--  --></body></html>
