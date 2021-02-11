@@ -113,7 +113,8 @@ text-align: center;
 }
 
 .portfolio-item {
-    width: 30%;
+    width: 45%;
+    margin-top: 10px;
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -124,13 +125,14 @@ text-align: center;
 }
 
 .screenshot {
-    height: 180px;
+    height: 240px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .screenshot img {
-    width: 100%;
+    width: 90%;
 }
 
 .title {
@@ -147,7 +149,7 @@ font-weight: bolder;
 }
 
 .summary {
-    height: 190px;
+    height: 100px;
 }
 
 .techstack p {
